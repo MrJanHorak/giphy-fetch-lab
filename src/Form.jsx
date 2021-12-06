@@ -1,32 +1,34 @@
 import React, {useState} from 'react';
 
+
 function Form(props) {
-  const [movieTitle, setMovieTitle] = useState('')
+  const [gifSearch, setGifSearch] = useState('')
 
   const handleSubmit = e => {
     console.log('handleSubmit clicked');
     e.preventDefault();
-    props.handleSubmit(movieTitle)
-    setMovieTitle('')
+    props.handleSubmit(gifSearch)
+    setGifSearch('')
   };
 
   const handleChange = e => {
     console.log('handleChange clicked');
-    const title =  e.target.value
-    setMovieTitle(title)
+    const search =  e.target.value
+    setGifSearch(search)
   };
 
     return (
       <>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="movieTitle">Title:</label>
+          
           <input
-            id="movieTitle"
+            id="gifSearch"
             type="text"
-            value={movieTitle}
+            value={gifSearch}
+            placeholder='type of giphy'
             onChange={handleChange}
           />
-          <input type="submit" value="Find Movie Info" />
+          <input type="submit" value="Go Fetch" />
         </form>
       </>
     );
