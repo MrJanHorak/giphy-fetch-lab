@@ -1,10 +1,21 @@
-.App {
-  text-align: center;
-  
+body {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+
 }
 
-body {
-  background-color: grey;
+.App {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  height:450px;
 }
 .App-logo {
   height: 40vmin;
