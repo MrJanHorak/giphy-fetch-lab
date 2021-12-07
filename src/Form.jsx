@@ -16,7 +16,9 @@ function Form(props) {
     const search =  e.target.value
     setGifSearch(search)
   };
-
+  const refreshPage = ()=>{
+    window.location.reload();
+  }
     return (
       <>
         <form onSubmit={handleSubmit}>
@@ -29,6 +31,7 @@ function Form(props) {
             onChange={handleChange}
           />
           <input type="submit" value="Go Fetch" />
+          < button onClick={refreshPage}> Refresh Page</button>
         </form>
       </>
     );
